@@ -17,9 +17,11 @@
 
 Design: **Figma**
 
-Frontend: **React**
+Frontend: **HTML/CSS**
 
 Backend: **Node.js**
+
+3D Modeling & Animation: **Blender**
 
 Server/DB: **AWS**
 
