@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 스플래시 화면 -->
+    <div id="splash-screen">
+        <img src="./assets/logo_dark.svg" alt="logo" id="logo">
+    </div>
+
+    <!-- 사이드바 -->
+    <div id="mySidenav" class="sidenav">
+        <a href="#" onclick="toggleNav()">
+            <img src="./assets/menu_icon.svg" class="menu-icon">
+            <img src="./assets/logo.svg" class="menu-svg">
+        </a>
+        <a href="#">
+            <img src="./assets/home_icon.svg" class="menu-logo">
+            <span class="menu-item-text">홈 화면</span>
+        </a>
+        <hr style="margin: 10px;">
+        <a href="./floor/#">
+            <img src="./assets/stairs_icon.svg" class="menu-logo">
+            <span class="menu-item-text">층별 안내</span>
+        </a>
+        <a href="./building/#">
+            <img src="./assets/building_icon.svg" class="menu-logo">
+            <span class="menu-item-text">관별 안내</span>
+        </a>
+        <a href="./dormitory/#">
+            <img src="./assets/dormitory_icon.svg" class="menu-logo">
+            <span class="menu-item-text">기숙사 안내</span>
+        </a>
+        <a href="./parking_lot/#">
+            <img src="./assets/parking_icon.svg" class="menu-logo">
+            <span class="menu-item-text">주차장 안내</span>
+        </a>
+        <a href="./inquiry/#">
+            <img src="./assets/inquiry_icon.svg" class="menu-logo">
+            <span class="menu-item-text">기타 문의사항</span>
+        </a>
+    </div>
+
+    <!-- 메인 페이지 -->
+    <main id="main">
+        <img src="./assets/logo_dark.svg" id="logo" style="margin-left: 20px; width: 150px; height: 150px;">
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

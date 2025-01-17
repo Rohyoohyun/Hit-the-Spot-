@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+}
+
+/* 스플래시 화면 */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#logo {
+    width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* 전체 페이지 스타일 */
+* {
+    font-family: 'Pretendard';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+/* 사이드바 기본 스타일 */
+.sidenav {
+    height: 100%;
+    width: 5%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2E2E2E;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: none;
+}
+
+.sidenav img {
+    width: 40px;
+    height: 40px;
+}
+
+/* 사이드바 메뉴 항목 스타일 */
+.sidenav a {
+    padding: 8px 16px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    position: relative;
+    border-radius: 40px;
+}
+
+.sidenav a:hover {
+    background-color: rgba(255, 255, 255, 0.575);
+    color: #000;
+}
+
+.sidenav a:active {
+    background-color: rgba(204, 204, 204, 0.3);
+    color: #ccc;
+}
+
+.sidenav .menu-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.sidenav .menu-svg {
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+}
+
+/* 문의 메뉴 항목만 아래에 위치하도록 설정 */
+.sidenav a:last-child {
+    position: absolute;
+    bottom: 20px; /* 문의 메뉴는 아래에서 20px 위치 */
+}
+
+/* 텍스트 숨기기 */
+.sidenav .menu-item-text {
+    display: none;
+}
+
+/* 사이드바 열릴 때 아이콘 + 텍스트 보이기 */
+.sidenav.open {
+    width: 250px;   /* 전체 사이드바 열기 */
+}
+
+.sidenav.open .menu-item-text {
+    display: inline-block;
+}
+
+.sidenav.open a {
+    padding-left: 32px;
+}
+
+/* 메인 페이지 스타일 */
+#main {
+    margin-left: 5%;
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+/* 로고 숨기기 (사이드바가 열리면) */
+.sidenav.open ~ #main #logo {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .sidenav {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        display: block;
+        padding-top: 20px;
+    }
+
+    .sidenav a {
+        font-size: 20px;
+    }
+
+    #main {
+        margin-left: 0;
+    }
+
+    .sidenav.open {
+        width: 100%;
+    }
+
+    #splash-screen {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav { padding-top: 15px; }
+    .sidenav a { font-size: 18px; }
+}
