@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hit the Spot</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // AJAX로 폼 제출을 처리하는 함수
+        function submitForm(event) {
+            event.preventDefault(); // 페이지 새로 고침 방지
+
+            // 폼 데이터 수집
+            const formData = new FormData(document.getElementById('contact_form'));
+
+            // AJAX 요청 보내기
+            fetch('/inquiry', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // 성공적인 응답 처리
+                alert(data.message); // 서버에서 보낸 메시지 표시
+                // 폼 리셋 (선택 사항)
+                document.getElementById('contact_form').reset();
+            })
+            .catch(error => {
+                // 오류 처리
+                alert('오류가 발생했습니다. 다시 시도해 주세요.');
+                console.error(error);
+            });
+        }
+    </script>
+</head>
+<body>
+    <img src="../../img/logo.svg" alt="Hit the Spot" class="logo">
+
+    <!-- 폼에서 action을 inquiry/index.html로 설정 -->
+    <form id="contact_form" onsubmit="submitForm(event)" method="POST" enctype="multipart/form-data">
+        <div class="row">
+            <label class="required" for="name">제목입력:</label><br />
+            <input id="name" class="input" name="name" type="text" size="30" /><br />
+            <span id="name_validation" class="error_message"></span>
+        </div>
+        <div class="row">
+            <label class="required" for="message">내용입력:</label><br />
+            <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+            <span id="message_validation" class="error_message"></span>
+        </div>
+        <div style="text-align: right; margin: 3%;">
+            <input id="submit_button" type="submit" value="완료" style="width: 100px;"/>
+        </div>
+    </form>
+
+    <!-- Tool Bar -->
+    <div class="fixed-toolbar">
+        <a href="../../floor/index.html"><img src="../../img/floor_icon.svg"><span>층별안내</span></a>
+        <a href="../../building/index.html"><img src="../../img/building_icon.svg"><span>관별안내</span></a>
+        <a href="../../parking/index.html"><img src="../../img/parking_icon.svg"><span>주차장안내</span></a>
+        <a href="../../inquiry/index.html"><img src="../../img/inquiry_icon.svg"><span>문의</span></a>
+    </div>
+</body>
+</html>

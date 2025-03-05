@@ -1,0 +1,94 @@
+/* 폰트 설정 */
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'GmarketSansMedium', sans-serif;
+}
+
+/* 스플래시 화면 */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+/* 로고 컨테이너 (로고 + 설명) */
+.logo-container {
+    text-align: center;
+}
+
+/* 로고 이미지 */
+.logo {
+    width: 300px;  /* 기존 250px → 300px로 증가 */
+    height: auto;
+    animation: logoBlinkFast 1s linear infinite;
+}
+
+/* 📱 반응형 (작은 화면) */
+@media (max-width: 768px) {
+    .logo {
+        width: 220px;  /* 기존 180px → 220px */
+    }
+    .splash-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 180px;  /* 기존 150px → 180px */
+    }
+    .splash-text {
+        font-size: 14px;
+    }
+}
+
+/* 설명 텍스트 */
+.splash-text {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+@keyframes logoBlinkFast {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes logoBlinkSlow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.logo.slow {
+    animation: logoBlinkSlow 3s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+/* 메인 화면 스타일 */
+.main-screen {
+    display: none;
+    padding: 20px;
+    text-align: center;
+}

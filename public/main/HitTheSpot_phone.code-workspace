@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "HitTheSpot_phone",
+			"path": "../.."
+		},
+		{
+			"name": "spot_img",
+			"path": "../../../Downloads/spot_img"
+		}
+	],
+	"settings": {}
+}

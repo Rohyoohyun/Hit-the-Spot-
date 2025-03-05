@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hit the Spot!</title>
+    <link rel="stylesheet" href="Splash-styles.css">
+</head>
+<body>
+    <div class="splash-screen">
+        <img src="../../img/logo.svg" alt="로고" class="logo">
+        <p class="splash-text">부산소프트웨어마이스터고 지도</p>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "../../main/index.html"; // 5초 후 메인 페이지로 이동
+        }, 5000);
+
+        // 로고 애니메이션 변경
+        setTimeout(function() {
+            document.querySelector('.logo').classList.add('slow');
+        }, 2000); // 3초 후에 느리게 애니메이션을 적용
+    </script>
+</body>
+</html>
