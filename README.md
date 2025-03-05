@@ -7,12 +7,6 @@
 생각보다 복잡하고 많은 교실이 있어서 어떤 용도로 쓰는 지도 모르는 교실이 1학년 2학기 초까지 있었습니다. 
 제 후배님들이 저처럼 그런 일을 겪지 않기를 바라면서 제작하게 되었습니다.
 
-### 기능 제공
-- 지도 확대/축소 기능
-- 3D/2D ver 선택 기능
-- 장소 글자 클릭시 장소 사진과 함께 부가설명
-- 교실이름 클릭시 역할 소개(한줄 수업내용소개)
-
 ### 기술스택
 
 Design: **Figma**
@@ -21,9 +15,9 @@ Frontend: **HTML/CSS**
 
 Backend: **Node.js**
 
-3D Modeling & Animation: **Blender**
+3D Modeling & Animation: **Blender** // 해당 기능은 천천히 구현 예정
 
-Server/DB: **AWS**
+Server/DB: **Railway.app**
 
 Collaboration tools: **Git, GitHub, Notion**
 
