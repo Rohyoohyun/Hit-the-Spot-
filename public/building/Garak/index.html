@@ -9,10 +9,18 @@
 <body>
     <!-- 검색창 -->
     <div class="search">
-        <img src="../../img/logo.svg" alt="Hit the Spot" class="logo" style="margin-top: 10%; width: 150px;">
+        <img src="../../../img/logo.svg" alt="Hit the Spot" class="logo" style="margin-top: 10%; width: 150px;">
         <div class="search-input-wrapper">
-            <img src="../../img/Search_icon.svg" style="width: 50px; margin-right: 10px;">
-            <input type="text" placeholder="장소를 입력하고 Enter를 눌러주세요">
+            <img src="../../../img/Search_icon.svg" style="width: 50px; margin-right: 10px;">
+            <input type="text" id="searchInput" placeholder="장소를 입력하고 Enter를 눌러주세요">
+        </div>
+    </div>
+
+    <!-- 모달 창 -->
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <ul id="searchResults"></ul>
         </div>
     </div>
 
@@ -29,16 +37,16 @@
         <h2>1층</h2>
         <hr style="border-top: 5px solid #333;">
         <a href="./1F_room/gym.html" class="box2">체육관</a>
-        <a href="#" class="box2">체육교무실</a>
-        <a href="./1F_room/gym.html" class="box2">탁구실</a>
+        <a href="#" class="box2">-체육교무실-</a>
+        <a href="#" class="box2">-탁구실-</a>
         <a href="./1F_room/shower.html" class="box2">샤워실</a>
     </div>
 
     <div style="margin: 5%; padding-bottom: 100px;">
         <h2>2층</h2>
         <hr style="border-top: 5px solid #333;">
-        <a href="#" class="box2">방송실</a>
-        <a href="#" class="box2">관람석</a>
+        <a href="#" class="box2">-방송실-</a>
+        <a href="#" class="box2">-관람석-</a>
     </div>
 
     <!-- Tool Bar -->
@@ -46,10 +54,10 @@
         <a href="../../floor/index.html"><img src="../../img/floor_icon.svg"><span>층별안내</span></a>
         <a href="../../building/index.html"><img src="../../img/building_icon.svg"><span>관별안내</span></a>
         <a href="../../parking/index.html"><img src="../../img/parking_icon.svg"><span>주차장안내</span></a>
-        <a href="../../inquiry/index.html"><img src="../../img/inquiry_icon.svg"><span>문의</span></a>
+        <a href="https://forms.gle/4RxgFc2886d7CLFW8"><img src="../../../img/inquiry_icon.svg"><span>문의</span></a>
     </div>
     
     <!-- 검색창 기능 연결 -->
-    <script src="../script.js"></script>
+    <script src="../../script.js"></script>
 </body>
 </html>

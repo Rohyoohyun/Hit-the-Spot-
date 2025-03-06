@@ -8,10 +8,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": ": 부산SW마고 입학을 원하는 지망생, 부산SW마고가 아직 어색한 학생, 간단정보를 알고 싶은 학부모를 위한 BSSM 지도 서비스",
   "dependencies": {
+    "body-parser": "^1.20.3",
     "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "levenshtein": "^1.0.5",
+    "nodemailer": "^6.10.0",
     "open": "^10.1.0"
   }
 }

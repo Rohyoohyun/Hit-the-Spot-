@@ -9,10 +9,18 @@
 <body>
     <!-- 검색창 -->
     <div class="search">
-        <img src="../../img/logo.svg" alt="Hit the Spot" class="logo" style="margin-top: 10%; width: 150px;">
+        <img src="../../../img/logo.svg" alt="Hit the Spot" class="logo" style="margin-top: 10%; width: 150px;">
         <div class="search-input-wrapper">
-            <img src="../../img/Search_icon.svg" style="width: 50px; margin-right: 10px;">
-            <input type="text" placeholder="장소를 입력하고 Enter를 눌러주세요">
+            <img src="../../../img/Search_icon.svg" style="width: 50px; margin-right: 10px;">
+            <input type="text" id="searchInput" placeholder="장소를 입력하고 Enter를 눌러주세요">
+        </div>
+    </div>
+
+    <!-- 모달 창 -->
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <ul id="searchResults"></ul>
         </div>
     </div>
 
@@ -43,7 +51,7 @@
         <hr style="border-top: 5px solid #333;">
         <a href="./2F_room/Arisori.html" class="box2">공간-AriSori(매점)</a>
         <a href="./2F_room/Employment.html" class="box2">진로상담실</a>
-        <a href="/2F_room/Professional_teaching.html" class="box2">학생 지도실</a>
+        <a href="#" class="box2">-학생 지도실-</a>
         <a href="./2F_room/Professional_teaching.html" class="box2">전문 교무실</a>
         <a href="./2F_room/programming1.html" class="box2">프로그래밍 |</a>
         <a href="./2F_room/Object-oriented_programming.html" class="box2">객체지향 프로그래밍실</a>
@@ -55,7 +63,7 @@
         <h2>3층</h2>
         <hr style="border-top: 5px solid #333;">
         <a href="./3F_room/3rd_grade.html" class="box2">3학년실</a>
-        <a href="#" class="box2">학습지원실(3학년부)</a>
+        <a href="#" class="box2">-학습지원실(3학년부)-</a>
         <a href="./3F_room/Career.html" class="box2">진로활동실</a>
         <a href="./3F_room/Dormitory_Management.html" class="box2">기숙사운영부</a>
         <a href="./3F_room/English.html" class="box2">영어교과실</a>
@@ -68,10 +76,10 @@
         <a href="../../floor/index.html"><img src="../../img/floor_icon.svg"><span>층별안내</span></a>
         <a href="../../building/index.html"><img src="../../img/building_icon.svg"><span>관별안내</span></a>
         <a href="../../parking/index.html"><img src="../../img/parking_icon.svg"><span>주차장안내</span></a>
-        <a href="../../inquiry/index.html"><img src="../../img/inquiry_icon.svg"><span>문의</span></a>
+        <a href="https://forms.gle/4RxgFc2886d7CLFW8"><img src="../..//img/inquiry_icon.svg"><span>문의</span></a>
     </div>
 
     <!-- 검색창 기능 연결 -->
-    <script src="../script.js"></script>
+    <script src="../../script.js"></script>
 </body>
 </html>

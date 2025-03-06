@@ -12,9 +12,20 @@
         <img src="../../img/logo.svg" alt="Hit the Spot" class="logo" style="margin-top: 10%; width: 150px;">
         <div class="search-input-wrapper">
             <img src="../../img/Search_icon.svg" style="width: 50px; margin-right: 10px;">
-            <input type="text" placeholder="장소를 입력하고 Enter를 눌러주세요">
+            <input type="text" id="searchInput" placeholder="장소를 입력하고 Enter를 눌러주세요">
         </div>
     </div>
+
+    <!-- 모달 창 -->
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <ul id="searchResults"></ul>
+        </div>
+    </div>
+    
+    <!-- 검색 결과 출력 부분 -->
+    <div id="results"></div>  
 
     <!-- 선택창 -->
     <div class="container">
@@ -44,7 +55,7 @@
         <a href="./2F_room/IoT.html" class="box2">IoT 자동제어실</a>
         <a href="./2F_room/microprocessor.html" class="box2">마이크로프로세서실</a>
         <a href="./2F_room/embedded.html" class="box2">임베디드시스템실</a>
-        <a href="#" class="box2">임베디드 소프트웨어개발과 연구실</a>
+        <a href="#" class="box2">-임베디드 소프트웨어개발과 연구실-</a>
     </div>
 
     <div style="margin: 5%;">
@@ -67,10 +78,10 @@
         <a href="../../floor/index.html"><img src="../../img/floor_icon.svg"><span>층별안내</span></a>
         <a href="../../building/index.html"><img src="../../img/building_icon.svg"><span>관별안내</span></a>
         <a href="../../parking/index.html"><img src="../../img/parking_icon.svg"><span>주차장안내</span></a>
-        <a href="../../inquiry/index.html"><img src="../../img/inquiry_icon.svg"><span>문의</span></a>
+        <a href="https://forms.gle/4RxgFc2886d7CLFW8"><img src="../../img/inquiry_icon.svg"><span>문의</span></a>
     </div>
 
     <!-- 검색창 기능 연결 -->
-    <script src="../script.js"></script>
+    <script src="../../script.js"></script>
 </body>
 </html>
